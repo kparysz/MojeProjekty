@@ -2,7 +2,6 @@ package com.example.android.learning;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +17,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     List<SingleRowRepresentation> allElements = Collections.emptyList();
     LayoutInflater inflater;
     Context context;
+    ClickListener clickListener;
 
     public CustomAdapter(Context context, List<SingleRowRepresentation> allElements) {
         this.allElements = allElements;
@@ -37,13 +37,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         SingleRowRepresentation current = allElements.get(position);
         holder.title.setText(current.title);
         holder.image.setImageResource(current.image);
+    }
 
-//        holder.image.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                ToastMessage.showToast(context, "You clicked on item: " + position);
-//            }
-//        });
+    public void setClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -59,14 +56,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.single_row_text);
             image = (ImageView) itemView.findViewById(R.id.single_row_image);
-            image.setOnClickListener(this);
+            itemView.setOnClickListener(this);
         }
 
         public void onClick(View v) {
-            int position = getAdapterPosition();
-            context.startActivity(new Intent(context, SubActivity.class));
-            // ToastMessage.showToast(context, "You removed on item: " + position);
+            if (clickListener != null) {
+                clickListener.itemClicked(v, getAdapterPosition());
+            }
         }
 
+    }
+
+    public interface ClickListener {
+        public void itemClicked(View view, int position);
     }
 }

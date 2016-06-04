@@ -1,6 +1,7 @@
 package com.example.android.learning;
 
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class NavigationDrawerFragment extends Fragment {
+public class NavigationDrawerFragment extends Fragment implements CustomAdapter.ClickListener {
 
     ActionBarDrawerToggle drawerToggle;
     DrawerLayout drawerLayout;
@@ -35,6 +36,7 @@ public class NavigationDrawerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         adapter = new CustomAdapter(getActivity(), setUpDateForRecycler());
+        adapter.setClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
@@ -90,4 +92,9 @@ public class NavigationDrawerFragment extends Fragment {
         });
     }
 
+    @Override
+    public void itemClicked(View view, int position) {
+        ToastMessage.showToast(getActivity(), position + "");
+        startActivity(new Intent(getActivity(), SubActivity.class));
+    }
 }
