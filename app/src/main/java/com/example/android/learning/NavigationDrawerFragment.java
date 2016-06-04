@@ -47,10 +47,13 @@ public class NavigationDrawerFragment extends Fragment {
         String[] titles = resources.getStringArray(R.array.titles);
         int[] images = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4};
 
-        for (int i = 0; i < images.length; i++) {
+        for (int i = 0; i < 100; i++) {
             SingleRowRepresentation singleRow = new SingleRowRepresentation();
-            singleRow.title = titles[i];
-            singleRow.image = images[i];
+
+            singleRow.title = titles[i % titles.length] + " " + i;
+            singleRow.image = images[i % images.length];
+
+
             fillWithElements.add(singleRow);
         }
         return fillWithElements;

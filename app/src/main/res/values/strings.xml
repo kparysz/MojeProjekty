@@ -10,9 +10,8 @@
     <string name="default_text">default text</string>
 
     <string-array name="titles">
-        <item>Title 1</item>
-        <item>Title 2</item>
-        <item>Title 3</item>
-        <item>Title 4</item>
+        <item>Title</item>
+
     </string-array>
+    <string name="title_activity_sub">SubActivity</string>
 </resources>
