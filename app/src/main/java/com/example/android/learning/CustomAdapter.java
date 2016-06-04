@@ -28,7 +28,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.single_navigation_drawer_row, parent, false);
-        CustomViewHolder holder = new CustomViewHolder(view);
+        CustomViewHolder holder;
+        holder = new CustomViewHolder(view);
         return holder;
     }
 

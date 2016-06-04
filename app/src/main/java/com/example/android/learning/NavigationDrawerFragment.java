@@ -21,7 +21,6 @@ import java.util.List;
 public class NavigationDrawerFragment extends Fragment implements CustomAdapter.ClickListener {
 
     ActionBarDrawerToggle drawerToggle;
-    DrawerLayout drawerLayout;
     RecyclerView recyclerView;
     CustomAdapter adapter;
 
