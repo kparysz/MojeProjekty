@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyViewHolder>{
+public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyViewHolder> {
 
     LayoutInflater inflater;
     Context context;
@@ -46,21 +46,21 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyVi
         return singleRow.size();
     }
 
-   class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-       TextView navDrawerTextItem;
+        TextView navDrawerTextItem;
 
-       public MyViewHolder(View itemView) {
-           super(itemView);
-           navDrawerTextItem = (TextView) itemView.findViewById(R.id.nav_drawer_single_row_text);
-           itemView.setOnClickListener(this);
-       }
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            navDrawerTextItem = (TextView) itemView.findViewById(R.id.nav_drawer_single_row_text);
+            itemView.setOnClickListener(this);
+        }
 
-       @Override
-       public void onClick(View view) {
-           clickOnItem.itemClicked(getAdapterPosition());
-       }
-   }
+        @Override
+        public void onClick(View view) {
+            clickOnItem.itemClicked(getAdapterPosition());
+        }
+    }
 
     interface ClickOnItem {
         public void itemClicked(int position);

@@ -4,6 +4,8 @@ package com.example.android.groundzeroapp;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,13 +18,22 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import flashing.FlashingFragment;
+import lookup.LookUpFragment;
+import speedreading.SpeedReadingFragment;
+import speedreadingtests.SpeedReadingTests;
+import fieldofviewwidening.FieldOfViewFragment;
+import warmup.WarmUpFragment;
 
-public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapter.ClickOnItem{
+
+public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapter.ClickOnItem {
 
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     RecyclerView recyclerView;
+    int position;
+
 
     public NavigationDrawerFragment() {
     }
@@ -46,13 +57,11 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getActivity().invalidateOptionsMenu();
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                getActivity().invalidateOptionsMenu();
             }
         };
         drawerLayout.addDrawerListener(drawerToggle);
@@ -78,6 +87,40 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
 
     @Override
     public void itemClicked(int position) {
-        ToastMessage.showToast(getActivity(), "Let's do this " + position);
+
+        Fragment fragment;
+
+        if (position == 0) {
+            fragment = new SpeedReadingTests();
+            setFragment(fragment);
+        }
+        else if (position == 1) {
+            fragment = new FieldOfViewFragment();
+            setFragment(fragment);
+        } else if (position == 2) {
+            fragment = new FlashingFragment();
+            setFragment(fragment);
+        } else if (position == 3) {
+            fragment = new LookUpFragment();
+            setFragment(fragment);
+        } else if (position == 4) {
+            fragment = new WarmUpFragment();
+            setFragment(fragment);
+        } else if (position == 5) {
+            fragment = new SpeedReadingFragment();
+            setFragment(fragment);
+        } else {
+            ToastMessage.showToast(getActivity(), "Fragment error");
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+
     }
+
+    private void setFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container_for_fragments, fragment)
+                .commit();
+    }
+
 }
