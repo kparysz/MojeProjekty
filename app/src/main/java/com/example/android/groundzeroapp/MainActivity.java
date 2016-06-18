@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.navigation_drawer);
         drawerFragment.setUpData(drawerLayout, toolbar);
-
-
-
     }
 
     @Override

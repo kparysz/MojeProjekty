@@ -7,6 +7,10 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="nav_drawer_mocked_text">Single row text</string>
+    <string name="links_to_first_fragment">Links to first fragment</string>
+    <string name="links_to_second_fragment">Links to second fragment</string>
+    <string name="links_to_third_fragment">Links to third fragment</string>
+    <string name="links_to_fourth_fragment">Links to fourth fragment</string>
 
     <string-array name="titles">
         <item>Testy</item>
@@ -16,4 +20,5 @@
         <item>Rozgrzewka</item>
         <item>Speed Reader</item>
     </string-array>
+    <string name="title_activity_field_of_view_grid_one">FieldOfViewGridOneActivity</string>
 </resources>

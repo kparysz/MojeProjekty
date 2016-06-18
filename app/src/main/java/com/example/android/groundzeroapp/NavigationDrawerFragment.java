@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import fieldofviewwidening.FieldOfViewFragment;
 import flashing.FlashingFragment;
 import lookup.LookUpFragment;
 import speedreading.SpeedReadingFragment;
 import speedreadingtests.SpeedReadingTests;
-import fieldofviewwidening.FieldOfViewFragment;
 import warmup.WarmUpFragment;
 
 
@@ -32,7 +33,6 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     RecyclerView recyclerView;
-    int position;
 
 
     public NavigationDrawerFragment() {
@@ -77,9 +77,12 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
         List<NavDrawerSingleRowRepresentation> singleRowRepresentations = new ArrayList<>();
         Resources resources = getResources();
         String[] titles = resources.getStringArray(R.array.titles);
+        int[] fragmentIDs = {R.id.speed_reading_test_root, R.id.field_of_view_root, R.id.flashing_root,
+                R.id.look_up_root, R.id.warm_up_root, R.id.speed_reading_root};
         for (int i = 0; i < titles.length; i++) {
             NavDrawerSingleRowRepresentation singleRow = new NavDrawerSingleRowRepresentation();
             singleRow.title = titles[i];
+            singleRow.id = fragmentIDs[i];
             singleRowRepresentations.add(singleRow);
         }
         return singleRowRepresentations;
@@ -89,12 +92,12 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
     public void itemClicked(int position) {
 
         Fragment fragment;
+        View view = null;
 
         if (position == 0) {
             fragment = new SpeedReadingTests();
             setFragment(fragment);
-        }
-        else if (position == 1) {
+        } else if (position == 1) {
             fragment = new FieldOfViewFragment();
             setFragment(fragment);
         } else if (position == 2) {
@@ -116,11 +119,13 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
 
     }
 
-    private void setFragment(Fragment fragment) {
+    public void setFragment(Fragment fragment) {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.container_for_fragments, fragment)
                 .commit();
     }
+
+
 
 }
