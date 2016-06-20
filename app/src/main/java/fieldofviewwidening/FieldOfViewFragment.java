@@ -11,11 +11,12 @@ import android.widget.ImageView;
 
 import com.example.android.groundzeroapp.Pyramids;
 import com.example.android.groundzeroapp.R;
+import com.example.android.groundzeroapp.SchultzTables;
 
 
 public class FieldOfViewFragment extends Fragment {
 
-    ImageView firstGrid;
+    ImageView firstGrid, secondGrid;
 
     public FieldOfViewFragment() {
     }
@@ -25,10 +26,20 @@ public class FieldOfViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_field_of_view, container, false);
         firstGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_one);
+        secondGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_two);
         firstGrid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Pyramids.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        secondGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SchultzTables.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }

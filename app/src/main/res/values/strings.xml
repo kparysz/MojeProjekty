@@ -21,4 +21,5 @@
         <item>Migawki</item>
     </string-array>
     <string name="title_activity_field_of_view_grid_one">FieldOfViewGridOneActivity</string>
+    <string name="title_activity_schultz_tables">SchultzTables</string>
 </resources>

@@ -1,18 +1,16 @@
 package com.example.android.groundzeroapp;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-
-public class Pyramids extends AppCompatActivity {
+public class SchultzTables extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pyramids);
+        setContentView(R.layout.activity_schultz_tables);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,4 +27,5 @@ public class Pyramids extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

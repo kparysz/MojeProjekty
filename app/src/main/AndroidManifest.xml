@@ -18,8 +18,11 @@
         <activity
             android:name=".Pyramids"
             android:label="@string/title_activity_field_of_view_grid_one"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".SchultzTables"
+            android:label="@string/title_activity_schultz_tables"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
