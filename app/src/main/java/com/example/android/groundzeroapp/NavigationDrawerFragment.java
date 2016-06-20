@@ -11,7 +11,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,8 +76,8 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
         List<NavDrawerSingleRowRepresentation> singleRowRepresentations = new ArrayList<>();
         Resources resources = getResources();
         String[] titles = resources.getStringArray(R.array.titles);
-        int[] fragmentIDs = {R.id.speed_reading_test_root, R.id.field_of_view_root, R.id.flashing_root,
-                R.id.look_up_root, R.id.warm_up_root, R.id.speed_reading_root};
+        int[] fragmentIDs = {R.id.speed_reading_test_root, R.id.field_of_view_root,
+                R.id.look_up_root, R.id.warm_up_root, R.id.speed_reading_root, R.id.flashing_root};
         for (int i = 0; i < titles.length; i++) {
             NavDrawerSingleRowRepresentation singleRow = new NavDrawerSingleRowRepresentation();
             singleRow.title = titles[i];
@@ -89,32 +88,40 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
     }
 
     @Override
-    public void itemClicked(int position) {
+    public void itemClicked(int viewId) {
 
         Fragment fragment;
         View view = null;
 
-        if (position == 0) {
-            fragment = new SpeedReadingTests();
-            setFragment(fragment);
-        } else if (position == 1) {
-            fragment = new FieldOfViewFragment();
-            setFragment(fragment);
-        } else if (position == 2) {
-            fragment = new FlashingFragment();
-            setFragment(fragment);
-        } else if (position == 3) {
-            fragment = new LookUpFragment();
-            setFragment(fragment);
-        } else if (position == 4) {
-            fragment = new WarmUpFragment();
-            setFragment(fragment);
-        } else if (position == 5) {
-            fragment = new SpeedReadingFragment();
-            setFragment(fragment);
-        } else {
-            ToastMessage.showToast(getActivity(), "Fragment error");
+        switch (viewId) {
+            case R.id.speed_reading_test_root:
+                fragment = new SpeedReadingTests();
+                setFragment(fragment);
+                break;
+            case R.id.field_of_view_root:
+                fragment = new FieldOfViewFragment();
+                setFragment(fragment);
+                break;
+            case R.id.flashing_root:
+                fragment = new FlashingFragment();
+                setFragment(fragment);
+                break;
+            case R.id.look_up_root:
+                fragment = new LookUpFragment();
+                setFragment(fragment);
+                break;
+            case R.id.warm_up_root:
+                fragment = new WarmUpFragment();
+                setFragment(fragment);
+                break;
+            case R.id.speed_reading_root:
+                fragment = new SpeedReadingFragment();
+                setFragment(fragment);
+                break;
+            default:
+                ToastMessage.showToast(getActivity(), "Fragment error");
         }
+
         drawerLayout.closeDrawer(GravityCompat.START);
 
     }
@@ -125,7 +132,6 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
                 .replace(R.id.container_for_fragments, fragment)
                 .commit();
     }
-
 
 
 }

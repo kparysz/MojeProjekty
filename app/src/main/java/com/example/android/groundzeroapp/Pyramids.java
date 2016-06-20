@@ -19,7 +19,6 @@ public class Pyramids extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
@@ -29,7 +28,7 @@ public class Pyramids extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-           this.finish();
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

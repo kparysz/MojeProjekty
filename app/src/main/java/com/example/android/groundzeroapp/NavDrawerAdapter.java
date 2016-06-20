@@ -58,11 +58,12 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyVi
 
         @Override
         public void onClick(View view) {
-            clickOnItem.itemClicked(getAdapterPosition());
+            int viewId = singleRow.get(getAdapterPosition()).id;
+            clickOnItem.itemClicked(viewId);
         }
     }
 
     interface ClickOnItem {
-        public void itemClicked(int position);
+        public void itemClicked(int viewId);
     }
 }

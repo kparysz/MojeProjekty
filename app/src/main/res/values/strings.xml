@@ -15,10 +15,10 @@
     <string-array name="titles">
         <item>Testy</item>
         <item>Poszerzanie</item>
-        <item>Migawki</item>
         <item>Odszukiwanie</item>
         <item>Rozgrzewka</item>
         <item>Speed Reader</item>
+        <item>Migawki</item>
     </string-array>
     <string name="title_activity_field_of_view_grid_one">FieldOfViewGridOneActivity</string>
 </resources>

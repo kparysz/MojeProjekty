@@ -18,11 +18,7 @@
         <activity
             android:name=".Pyramids"
             android:label="@string/title_activity_field_of_view_grid_one"
-            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="" />
         </activity>
     </application>
 
