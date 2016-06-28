@@ -26,14 +26,14 @@
     <string name="title_activity_text_pyramids">WideningText</string>
 
     <string-array name="pyramidsTabs">
-        <item>Tab1</item>
-        <item>Tab2</item>
-        <item>Tab3</item>
+        <item>FOV Tab1</item>
+        <item>FOV Tab2</item>
+        <item>FOV Tab3</item>
     </string-array>
 
     <string-array name="schultzTablesTabs">
-        <item>Tab1</item>
-        <item>Tab2</item>
-        <item>Tab3</item>
+        <item>Schultz Tab1</item>
+        <item>Schultz Tab2</item>
+        <item>Schultz Tab3</item>
     </string-array>
 </resources>

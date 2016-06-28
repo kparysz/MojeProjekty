@@ -95,7 +95,7 @@ public class Pyramids extends AppCompatActivity {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View layout = inflater.inflate(R.layout.fragment_pyramids_layout, container, false);
+            View layout = inflater.inflate(R.layout.fragment_widening_layout, container, false);
             textView = (TextView) layout.findViewById(R.id.fragment_text_view);
             Bundle bundle = getArguments();
             if (bundle != null) {
@@ -104,8 +104,6 @@ public class Pyramids extends AppCompatActivity {
             return layout;
         }
     }
-
-
 }
 
 
