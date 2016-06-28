@@ -36,4 +36,16 @@
         <item>Schultz Tab2</item>
         <item>Schultz Tab3</item>
     </string-array>
+
+    <string-array name="wideningAnimationsTabs">
+        <item>Animation Tab1</item>
+        <item>Animation Tab2</item>
+        <item>Animation Tab3</item>
+    </string-array>
+
+    <string-array name="wideningTextTabs">
+        <item>Text Tab1</item>
+        <item>Text Tab2</item>
+        <item>Text Tab3</item>
+    </string-array>
 </resources>

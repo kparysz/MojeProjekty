@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fieldofviewwidening.SchultzTables">
+    tools:context=".fieldofviewwidening.WideningText">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,13 +15,13 @@
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <com.example.android.groundzeroapp.slidetabs.SlidingTabLayout
-        android:id="@+id/schultzTablesTabs"
+        android:id="@+id/wideningTextTabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/schultzTablesPager"
+        android:id="@+id/wideningTextPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
