@@ -20,6 +20,20 @@
         <item>Speed Reader</item>
         <item>Migawki</item>
     </string-array>
-    <string name="title_activity_field_of_view_grid_one">FieldOfViewGridOneActivity</string>
+    <string name="title_activity_field_of_view_grid_one">NumbersPiramids</string>
     <string name="title_activity_schultz_tables">SchultzTables</string>
+    <string name="title_activity_widening_animation">WideningAnimation</string>
+    <string name="title_activity_text_pyramids">WideningText</string>
+
+    <string-array name="pyramidsTabs">
+        <item>Tab1</item>
+        <item>Tab2</item>
+        <item>Tab3</item>
+    </string-array>
+
+    <string-array name="schultzTablesTabs">
+        <item>Tab1</item>
+        <item>Tab2</item>
+        <item>Tab3</item>
+    </string-array>
 </resources>

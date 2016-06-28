@@ -1,4 +1,4 @@
-package lookup;
+package com.example.android.groundzeroapp.warmup;
 
 
 import android.os.Bundle;
@@ -9,18 +9,17 @@ import android.view.ViewGroup;
 
 import com.example.android.groundzeroapp.R;
 
+public class WarmUpFragment extends Fragment {
 
-public class LookUpFragment extends Fragment {
 
-
-    public LookUpFragment() {
+    public WarmUpFragment() {
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_look_up, container, false);
+        return inflater.inflate(R.layout.fragment_warm_up, container, false);
     }
 
 }

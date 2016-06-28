@@ -3,7 +3,7 @@
     android:id="@+id/field_of_view_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fieldofviewwidening.FieldOfViewFragment">
+    tools:context=".fieldofviewwidening.FieldOfViewFragment">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package fieldofviewwidening;
+package com.example.android.groundzeroapp.fieldofviewwidening;
 
 
 import android.content.Intent;
@@ -9,14 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.android.groundzeroapp.Pyramids;
 import com.example.android.groundzeroapp.R;
-import com.example.android.groundzeroapp.SchultzTables;
 
 
 public class FieldOfViewFragment extends Fragment {
 
-    ImageView firstGrid, secondGrid;
+    ImageView firstGrid, secondGrid, thirdGrid, fourthGrid;
 
     public FieldOfViewFragment() {
     }
@@ -27,6 +25,9 @@ public class FieldOfViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_field_of_view, container, false);
         firstGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_one);
         secondGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_two);
+        thirdGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_three);
+        fourthGrid = (ImageView) view.findViewById(R.id.field_of_view_grid_four);
+
         firstGrid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,6 +41,24 @@ public class FieldOfViewFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), SchultzTables.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        thirdGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WideningAnimation.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        fourthGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WideningText.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }

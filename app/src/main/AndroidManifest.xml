@@ -16,12 +16,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Pyramids"
+            android:name=".fieldofviewwidening.Pyramids"
             android:label="@string/title_activity_field_of_view_grid_one"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".SchultzTables"
+            android:name=".fieldofviewwidening.SchultzTables"
             android:label="@string/title_activity_schultz_tables"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".fieldofviewwidening.WideningAnimation"
+            android:label="@string/title_activity_widening_animation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".fieldofviewwidening.WideningText"
+            android:label="@string/title_activity_text_pyramids"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -1,4 +1,4 @@
-package speedreadingtests;
+package com.example.android.groundzeroapp.flashing;
 
 
 import android.os.Bundle;
@@ -9,16 +9,18 @@ import android.view.ViewGroup;
 
 import com.example.android.groundzeroapp.R;
 
-public class SpeedReadingTests extends Fragment {
+
+public class FlashingFragment extends Fragment {
 
 
-    public SpeedReadingTests() {
+    public FlashingFragment() {
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_speed_reading_tests, container, false);
+        return inflater.inflate(R.layout.fragment_flashing, container, false);
     }
 
 }

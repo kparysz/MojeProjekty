@@ -1,16 +1,18 @@
-package com.example.android.groundzeroapp;
+package com.example.android.groundzeroapp.fieldofviewwidening;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class SchultzTables extends AppCompatActivity {
+import com.example.android.groundzeroapp.R;
+
+public class WideningAnimation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schultz_tables);
+        setContentView(R.layout.activity_widening_animation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,5 +29,4 @@ public class SchultzTables extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

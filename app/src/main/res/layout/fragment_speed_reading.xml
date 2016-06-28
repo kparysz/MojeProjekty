@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/speed_reading_root"
-    tools:context="speedreading.SpeedReadingFragment">
+    tools:context=".speedreading.SpeedReadingFragment">
 
     <TextView
         android:padding="15dp"

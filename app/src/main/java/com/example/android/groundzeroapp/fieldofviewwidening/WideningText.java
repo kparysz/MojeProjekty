@@ -1,18 +1,18 @@
-package com.example.android.groundzeroapp;
-
+package com.example.android.groundzeroapp.fieldofviewwidening;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.android.groundzeroapp.R;
 
-public class Pyramids extends AppCompatActivity {
+public class WideningText extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pyramids);
+        setContentView(R.layout.activity_text_pyramids);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -20,6 +20,7 @@ public class Pyramids extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

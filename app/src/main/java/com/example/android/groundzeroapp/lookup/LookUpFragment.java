@@ -1,4 +1,4 @@
-package flashing;
+package com.example.android.groundzeroapp.lookup;
 
 
 import android.os.Bundle;
@@ -10,17 +10,17 @@ import android.view.ViewGroup;
 import com.example.android.groundzeroapp.R;
 
 
-public class FlashingFragment extends Fragment {
+public class LookUpFragment extends Fragment {
 
 
-    public FlashingFragment() {
+    public LookUpFragment() {
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_flashing, container, false);
+        return inflater.inflate(R.layout.fragment_look_up, container, false);
     }
 
 }

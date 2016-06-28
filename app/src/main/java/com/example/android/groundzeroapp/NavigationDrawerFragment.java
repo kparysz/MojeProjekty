@@ -18,12 +18,12 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import fieldofviewwidening.FieldOfViewFragment;
-import flashing.FlashingFragment;
-import lookup.LookUpFragment;
-import speedreading.SpeedReadingFragment;
-import speedreadingtests.SpeedReadingTests;
-import warmup.WarmUpFragment;
+import com.example.android.groundzeroapp.fieldofviewwidening.FieldOfViewFragment;
+import com.example.android.groundzeroapp.flashing.FlashingFragment;
+import com.example.android.groundzeroapp.lookup.LookUpFragment;
+import com.example.android.groundzeroapp.speedreading.SpeedReadingFragment;
+import com.example.android.groundzeroapp.speedreadingtests.SpeedReadingTests;
+import com.example.android.groundzeroapp.warmup.WarmUpFragment;
 
 
 public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapter.ClickOnItem {
@@ -91,7 +91,6 @@ public class NavigationDrawerFragment extends Fragment implements NavDrawerAdapt
     public void itemClicked(int viewId) {
 
         Fragment fragment;
-        View view = null;
 
         switch (viewId) {
             case R.id.speed_reading_test_root:

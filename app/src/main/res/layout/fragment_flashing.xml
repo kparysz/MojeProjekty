@@ -1,16 +1,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flashing_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/flashing_root"
-    tools:context="flashing.FlashingFragment">
+    tools:context=".flashing.FlashingFragment">
 
     <TextView
-        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Flashing"
-        android:textSize="32dp"
-        android:textAlignment="viewEnd"/>
+        android:padding="15dp"
+        android:text="Migawki"
+        android:textAlignment="viewEnd"
+        android:textSize="32dp" />
 
 </FrameLayout>

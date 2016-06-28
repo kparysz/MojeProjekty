@@ -1,4 +1,4 @@
-package speedreading;
+package com.example.android.groundzeroapp.speedreading;
 
 
 import android.os.Bundle;
