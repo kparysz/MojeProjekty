@@ -63,6 +63,7 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyVi
         }
     }
 
+//TODO: Please remove this interface and use setOnClickListener in onBindViewHolder with using `int position`
     interface ClickOnItem {
         public void itemClicked(int viewId);
     }
