@@ -31,6 +31,7 @@ public class FieldOfViewFragment extends Fragment {
         firstGrid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //DRY Please extract this piece of code to extra static method
                 Intent intent = new Intent(getActivity(), Pyramids.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
